@@ -300,7 +300,7 @@ const upperLetters = (str) => {
   console.log(strCapital)
 }
 
-upperLetters(sampleString)
+// upperLetters(sampleString)
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -313,13 +313,30 @@ upperLetters(sampleString)
   return 'must provide a valid email address'
 */
 
+let myEmail = 'claramargaretdehlin@gmail.com'
+
+function emailCheck (email) {
+  emailWords = String(email)
+  emailWords.trim()
+  if (emailWords.includes('@')){
+    console.log ('email verified')
+  } else console.log ('must provide a valid email address')
+}
+
+// emailCheck(myEmail)
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
   Create a variable called `totalFrogs` and set it equal to your function invoked, passing in the amount of gold you are willing to spend.
 */
 
-//CODE HERE
+function yummyTrain (gold) {
+  console.log(`you can purchase ${gold/3} chocolate frogs!!`)
+}
+
+var totalFrogs = 7
+// yummyTrain(totalFrogs)
 
 
 ////////////////// PROBLEM 20 ////////////////////
@@ -327,8 +344,13 @@ upperLetters(sampleString)
   You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
 */
 
-//CODE HERE
+function yummyTrain2 (gold) {
+  roundDown = (gold)/3
+  console.log (`you can purchase ${Math.floor(roundDown)} chocolate frogs!!`)
+}
 
+var totalFrogs2 = 19
+// yummyTrain2(totalFrogs2)
 
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,5,6,7,8,9]
@@ -373,13 +395,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = [duck]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = [duck, rubberDuck]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = [duck, rubberDuck, sailorDuck]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = [duck, realDuck]
