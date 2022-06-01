@@ -283,7 +283,7 @@ if (arr1[i] === loser) {
 contestants.splice(i , 1)
 }
   }
-  console.log(contestants)
+  // console.log(contestants)
 }
 
 theEliminator(contestants, loser)
@@ -295,8 +295,12 @@ let sampleString = "Hi, my name is Kylo."
   Invoke the function, passing in the sampleString (above).
 */
 
-//CODE HERE
+const upperLetters = (str) => {
+  strCapital = str.toUpperCase()
+  console.log(strCapital)
+}
 
+upperLetters(sampleString)
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -344,7 +348,7 @@ function checkArrayAscending(arr) {
   return true
 }
 let arrayIsAscending = checkArrayAscending(sampleArray)
-console.log(arrayIsAscending)
+// console.log(arrayIsAscending)
 
 
 ////////////////// PROBLEM 22 ////////////////////
